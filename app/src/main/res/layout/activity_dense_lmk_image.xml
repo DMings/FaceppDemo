@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <com.megvii.demoface.view.FaceImageDlmkView
+        android:id="@+id/mFaceImagePointView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar" />
+
+    <ImageView
+        android:id="@+id/iv_show_tips"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/title_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/tip_icon" />
+
+    <LinearLayout
+        android:id="@+id/ll_detect_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_show_tips"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/iv_tips_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_detect_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxWidth="220dp"
+            android:minWidth="120dp"
+            android:scrollbars="vertical"
+            android:textColor="#131315"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_hairline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_hairline"
+                app:lmktext="发际线" />
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_eyebrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_eyebrow"
+                app:lmktext="眉毛" />
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_eye"
+                app:lmktext="眼睛" />
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_nose_midline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_nose_midline"
+                app:lmktext="鼻中线" />
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_nose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_nose"
+                app:lmktext="鼻子" />
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_mouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_mouth"
+                app:lmktext="嘴巴" />
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_contour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_contour"
+                app:lmktext="下轮廓" />
+
+            <com.megvii.demoface.view.DenseLmkDetailTypeView
+                android:id="@+id/view_dlmk_face_midline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                app:lmkchecked="true"
+                app:lmkdrawable="@drawable/selector_dlmk_face_midline"
+                app:lmktext="脸中线" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

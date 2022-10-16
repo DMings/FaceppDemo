@@ -1,0 +1,18 @@
+precision mediump float;
+uniform sampler2D alMaskTexture;
+varying vec2 textureCoordinate;
+uniform sampler2D srcTexture;
+void main()
+{
+    float alpha = texture2D(alMaskTexture, textureCoordinate).a;
+    vec4 srcColor =  texture2D(srcTexture, textureCoordinate);
+    //gl_FragColor = vec4(alpha, alpha, alpha, 1.0);
+    if(alpha >0.0){
+        	gl_FragColor = vec4(1.0, 1.0, 0, 1.0);
+        	//gl_FragColor = vec4(0.0, 1.0, srcColor.b, 1.0);
+    }else{
+            float gray=0.299*srcColor.r+0.578*srcColor.g+0.114*srcColor.b;
+        	//gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);
+        	gl_FragColor = vec4(1.0, 0, 0, 1.0);
+    }
+}

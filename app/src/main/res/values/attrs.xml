@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="segment_options">
+        <attr name="drawable" format="reference"/>
+        <attr name="text" format="string"/>
+        <attr name="checked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="denselmk_type">
+        <attr name="lmkdrawable" format="reference"/>
+        <attr name="lmktext" format="string"/>
+        <attr name="lmkchecked" format="boolean"/>
+    </declare-styleable>
+</resources>

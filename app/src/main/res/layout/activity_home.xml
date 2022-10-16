@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_home_page_bg">
+
+    <ImageView
+        android:id="@+id/iv_home_title"
+        android:layout_width="134dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/iv_home_page_title" />
+
+    <GridView
+        android:id="@+id/gv_ability_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_home_title"
+        android:layout_marginTop="30dp"
+        android:numColumns="2"
+        android:layout_centerHorizontal="true"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+
+    </GridView>
+</RelativeLayout>

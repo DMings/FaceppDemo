@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_denselmk_type"-->
+    <!--android:layout_width="42dp"-->
+    <!--android:layout_height="42dp"-->
+    <!--android:src="@mipmap/iv_hairline_checked"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:padding="4dp"/>-->
+    <LinearLayout
+        android:id="@+id/ll_detail_type"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="4dp">
+
+        <CheckBox
+            android:id="@+id/cb_denselmk_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/iv_hairline_checked"
+            android:button="@null"
+            android:clickable="false"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_denselmk_checked"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/iv_seg_checked" />
+
+    <TextView
+        android:id="@+id/tv_denselmk_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_detail_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="发际线"
+        android:textColor="#2E2932"
+        android:textSize="7sp" />
+</RelativeLayout>

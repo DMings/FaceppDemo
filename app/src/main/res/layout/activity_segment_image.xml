@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <ImageView
+        android:id="@+id/iv_seg_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/iv_show_tips"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/title_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/tip_icon" />
+
+    <LinearLayout
+        android:id="@+id/ll_detect_tips"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_show_tips"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/tips_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_detect_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#131315"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_segment_option"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <com.megvii.demoface.view.SegmentOptionView
+            android:id="@+id/seg_option_blackwhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            app:checked="true"
+            app:drawable="@mipmap/iv_seg_blackwhite"
+            app:text="黑白抠像" />
+
+        <com.megvii.demoface.view.SegmentOptionView
+            android:id="@+id/seg_option_transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            app:drawable="@mipmap/iv_seg_transparent"
+            app:text="透明抠像" />
+
+        <com.megvii.demoface.view.SegmentOptionView
+            android:id="@+id/seg_option_bgmixture1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            app:drawable="@mipmap/iv_seg_bg1"
+            app:text="背景图1" />
+
+        <com.megvii.demoface.view.SegmentOptionView
+            android:id="@+id/seg_option_bgmixture2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            app:drawable="@mipmap/iv_seg_bg2"
+            app:text="背景图2" />
+
+        <com.megvii.demoface.view.SegmentOptionView
+            android:id="@+id/seg_option_bgmixture3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            app:drawable="@mipmap/iv_seg_bg3"
+            app:text="背景图3" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_save_image"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_above="@id/ll_segment_option"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:src="@mipmap/iv_image_download" />
+</RelativeLayout>

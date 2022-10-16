@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <com.megvii.demoface.view.FaceImagePointView
+        android:id="@+id/mFaceImagePointView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_facepp_lmkselect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp">
+
+        <RadioGroup
+            android:id="@+id/rg_facepp_landmark_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_facepp_landmark_84"
+                style="@style/FaceDetectLandmarkSwtichRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_84_landmark"
+                android:checked="true"
+                android:text="84点"
+                android:textColor="@drawable/landmark_option_textcolor" />
+
+            <RadioButton
+                android:id="@+id/rb_facepp_landmark_106"
+                style="@style/FaceDetectLandmarkSwtichRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_106_landmark"
+                android:text="106点"
+                android:textColor="@drawable/landmark_option_textcolor" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_facepp_landmark_switch"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="关键点个数"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_show_tips"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/title_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/tip_icon" />
+
+    <LinearLayout
+        android:id="@+id/ll_detect_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_show_tips"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/iv_tips_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_detect_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxWidth="220dp"
+            android:minWidth="120dp"
+            android:scrollbars="vertical"
+            android:textColor="#131315"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

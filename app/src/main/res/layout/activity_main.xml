@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_auth_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="正在进行联网授权..." />
+    <LinearLayout
+        android:id="@+id/ll_detect_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/bt_face_detect"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="人脸检测"/>
+        <Button
+            android:id="@+id/bt_dense_lmk"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="人体稠密点"/>
+        <Button
+            android:id="@+id/bt_body_detect"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="人体骨骼检测"/>
+        <Button
+            android:id="@+id/bt_hand_detect"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="手部检测"/>
+        <Button
+            android:id="@+id/bt_scence_detect"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="场景检测"/>
+        <Button
+            android:id="@+id/bt_body_seg"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="人体抠像"/>
+    </LinearLayout>
+</RelativeLayout>

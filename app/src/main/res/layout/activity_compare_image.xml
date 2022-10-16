@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <ImageView
+        android:id="@+id/iv_show_tips"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/title_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/tip_icon" />
+
+    <LinearLayout
+        android:id="@+id/ll_compare_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_show_tips"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/iv_compera_face_one"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitCenter"/>
+
+            <Button
+                android:id="@+id/bt_upload_image_one"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_upload_image"
+                android:text="上传图片一"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/iv_compera_face_two"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerInside" />
+
+            <Button
+                android:id="@+id/bt_upload_image_two"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_upload_image"
+                android:text="上传图片二"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/ll_compare_image"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_compare_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="比对结果（0-100）"
+                android:textColor="#414141"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_comapare_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="90"
+                android:textColor="#4A4A4A"
+                android:textSize="48sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_compare_failure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_image_detect_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片一中未检测到人脸"
+                android:textColor="#9B9B9B"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_detect_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_show_tips"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/iv_tips_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_detect_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxWidth="220dp"
+            android:minWidth="120dp"
+            android:scrollbars="vertical"
+            android:textColor="#131315"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

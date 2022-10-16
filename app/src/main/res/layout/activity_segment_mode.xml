@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Demo"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="v1.0"
+        android:textColor="#66000000"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_segment_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_segment_robust"
+            android:layout_width="220dp"
+            android:layout_height="88dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_segment_robust_bg"
+            android:gravity="center"
+            android:text="高精准度版"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_segment_fast"
+            android:layout_width="220dp"
+            android:layout_height="88dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/iv_segment_fast_bg"
+            android:gravity="center"
+            android:text="高性能版"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_loading_bg"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pb_megvii_load"
+            style="@style/allinone_en_mProgress_circle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminateDuration="1000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:text="处理中..."/>
+    </LinearLayout>
+</RelativeLayout>

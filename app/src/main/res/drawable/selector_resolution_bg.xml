@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/iv_resolution_unselected" android:state_checked="false" />
+    <item android:drawable="@mipmap/iv_resolution_selected" />
+</selector>
